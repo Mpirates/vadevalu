@@ -97,14 +97,14 @@ async def next_page(bot, query):
         )
     elif off_set is None:
         btn.append(
-            [InlineKeyboardButton(f"🗓 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
-             InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")])
+            [InlineKeyboardButton(f"🗞️ {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
+             InlineKeyboardButton("NEXT 👉", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
                 InlineKeyboardButton("👩‍🦯 BACK", callback_data=f"next_{req}_{key}_{off_set}"),
-                InlineKeyboardButton(f"🗓 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
-                InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")
+                InlineKeyboardButton(f"🗞️ {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
+                InlineKeyboardButton("NEXT 👉", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
     try:
@@ -409,8 +409,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔍 ꜱᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
             InlineKeyboardButton('🕹️ɢʀᴏᴜᴩ', url='https://t.me/FILIMPIRATESGROUP')
         ], [
-            InlineKeyboardButton('ʜᴇʟᴩ🥵', callback_data='help'),
-            InlineKeyboardButton('☠️ᴀʙᴏᴜᴛ', callback_data='about')
+            InlineKeyboardButton('⚙️ʜᴇʟᴩ', callback_data='help'),
+            InlineKeyboardButton('🥵ᴀʙᴏᴜᴛ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -439,7 +439,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('🕹️ᴜᴩᴅᴀᴛᴇ', url='https://t.me/FPHDMOVE'),
-            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ😇', callback_data='source')
+            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ', callback_data='source')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
             InlineKeyboardButton('🔐 Close', callback_data='close_data')
