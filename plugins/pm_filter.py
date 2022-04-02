@@ -411,6 +411,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ], [
             InlineKeyboardButton('⚙️ʜᴇʟᴩ', callback_data='help'),
             InlineKeyboardButton('🥵ᴀʙᴏᴜᴛ', callback_data='about')
+        ], [
+            InlineKeyboardButton('📢ᴄʜᴀɴɴᴇʟ', url='https://t.me/FPHDMOVE')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
