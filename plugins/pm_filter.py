@@ -741,7 +741,7 @@ async def auto_filter(client, msg, spoll=False):
         cap = f"<b>🎬 Title:</b> {search}\n</b>\n<b><✍️ Note:</b> <s>This message will be Auto-deleted after 5 minute to avoid copyright issues.</s>"
     if imdb and imdb.get('poster'):
         try:
-                        await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
+            await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
                                       reply_markup=InlineKeyboardMarkup(btn))
         except (MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty):
             pic = imdb.get('poster')
