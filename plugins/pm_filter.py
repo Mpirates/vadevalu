@@ -114,7 +114,7 @@ async def next_page(bot, query):
     except MessageNotModified:
         pass
     await query.answer()
-    await asyncio.sleep(120)
+    await asyncio.sleep(300)
     await hehe.delete()
     await message.delete()
 
